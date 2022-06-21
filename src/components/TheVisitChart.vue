@@ -8,7 +8,7 @@ import * as am4charts from "@amcharts/amcharts4/charts";
 
 export default {
   props: {
-    visitData: {
+    dataForChart: {
       type: Array,
       default: () => [],
     },
@@ -19,7 +19,7 @@ export default {
   }),
 
   mounted() {
-    if (!this.visitData.length) return;
+    if (!this.dataForChart.length) return;
 
     // Hide Am logo
     am4core.addLicense("ch-custom-attribution");
@@ -31,7 +31,7 @@ export default {
     );
 
     // Set information about visits
-    visitChart.data = this.visitData;
+    visitChart.data = this.dataForChart;
 
     // Add X axis
     const categoryAxis = visitChart.xAxes.push(new am4charts.CategoryAxis());
@@ -48,6 +48,7 @@ export default {
     series.dataFields.categoryX = "date";
     series.bullets.push(new am4charts.CircleBullet());
     series.tooltipText = "{categoryX}: [bold]{valueY}[/]";
+    series.fill = am4core.color("#1E90FF");
 
     // Add scrollbar
     visitChart.scrollbarX = new am4core.Scrollbar();

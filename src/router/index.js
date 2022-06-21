@@ -1,12 +1,12 @@
-import store from "../store";
-
 import { createRouter, createWebHistory } from "vue-router";
+
+import store from "../store";
 
 const routes = [
   {
-    path: "/auth",
-    name: "Auth",
-    component: () => import("../views/Auth.vue"),
+    path: "/authorization",
+    name: "Authorization",
+    component: () => import("../views/Authorization.vue"),
   },
   {
     path: "/analytics",
@@ -25,9 +25,9 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  if (to.fullPath !== "/auth") {
+  if (to.fullPath !== "/authorization") {
     if (!store.getters["site/getSiteId"]) {
-      next("auth");
+      next("authorization");
 
       return;
     }

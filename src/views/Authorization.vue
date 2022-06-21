@@ -1,9 +1,11 @@
 <template>
   <main class="flex justify-center items-center flex-col h-screen">
-    <h1 class="flex items-center text-2xl">LeadHit</h1>
+    <h1 class="flex items-center text-2xl">
+      LeadHit <span class="ml-2 text-xl"> ❤</span>
+    </h1>
 
     <section
-      class="flex items-center w-full max-w-lg h-full max-h-64 pl-4 pr-4 shadow-lg shadow-gray-500/10 border-blue-400/20 border-b-4"
+      class="flex items-center w-full max-w-lg h-full max-h-64 pl-4 pr-4 shadow-lg shadow-gray-500/10 border-blue-400/40 border-b-4"
     >
       <the-auth-enter-form @enter="enter" />
     </section>
@@ -22,7 +24,7 @@ const authFetchClient = new AuthFetchClient(
 );
 
 export default {
-  name: "Auth",
+  name: "Authorization",
 
   components: {
     TheAuthEnterForm,
