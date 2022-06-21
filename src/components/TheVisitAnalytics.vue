@@ -1,5 +1,5 @@
 <template>
-  <div ref="visit-chart-root" class="h-60 pr-4"></div>
+  <div ref="visit-chart-root" class="h-60"></div>
 </template>
 
 <script>
@@ -51,6 +51,7 @@ export default {
 
     // Add scrollbar
     visitChart.scrollbarX = new am4core.Scrollbar();
+    visitChart.scrollbarY = new am4core.Scrollbar();
 
     // Change cursor
     visitChart.cursor = new am4charts.XYCursor();

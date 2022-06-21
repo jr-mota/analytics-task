@@ -1,7 +1,7 @@
 export default {
   namespaced: true,
   state: {
-    visits: [
+    visitData: [
       { date: "2020-07-01", visits: 213 },
       { date: "2020-07-02", visits: 249 },
       { date: "2020-07-03", visits: 179 },
@@ -30,17 +30,9 @@ export default {
       { date: "2020-07-26", visits: 166 },
       { date: "2020-07-27", visits: 163 },
       { date: "2020-07-28", visits: 135 },
-      { date: "2020-07-29", visits: 45 },
-      { date: "2020-07-30", visits: 45 },
-      { date: "2020-07-31", visits: 45 },
-      { date: "2020-08-01", visits: 45 },
-      { date: "2020-08-02", visits: 45 },
-      { date: "2020-08-03", visits: 45 },
-      { date: "2020-08-04", visits: 45 },
-      { date: "2020-08-05", visits: 45 },
     ],
   },
   getters: {
-    getVisits: (state) => state.visits,
+    getVisitData: (state) => state.visitData,
   },
 };
