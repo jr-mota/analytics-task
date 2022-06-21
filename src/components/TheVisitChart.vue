@@ -59,6 +59,8 @@ export default {
     visitChart.cursor.lineX.strokeWidth = 0;
     visitChart.cursor.lineY.strokeWidth = 0;
 
+    series.sequencedInterpolation = true;
+
     // Save chart in data
     this.visitChart = visitChart;
   },

@@ -1,5 +1,5 @@
 <template>
-  <main class="container mt-0 mb-0 ml-auto mr-auto">
+  <main class="container max-w-3xl mt-0 mb-0 ml-auto mr-auto">
     <header
       class="flex items-center p-6 shadow-lg shadow-gray-500/10 border-blue-400/40 border-b-4"
     >
