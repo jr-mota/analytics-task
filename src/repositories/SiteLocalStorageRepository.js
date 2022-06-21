@@ -1,6 +1,6 @@
 const SiteLocalStorageRepository = {
   saveSiteId(siteId) {
-    localStorage.setItem("leadhit-site-id", JSON.stringify(siteId));
+    localStorage.setItem("leadhit-site-id", siteId);
   },
 
   getSiteId() {
