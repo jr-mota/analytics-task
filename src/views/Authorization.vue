@@ -45,7 +45,7 @@ export default {
           this.$router.push("/analytics");
         }
       } catch (e) {
-        console.log(e);
+        console.warn(e);
       }
     },
   },
