@@ -49,6 +49,7 @@ export default {
     series.bullets.push(new am4charts.CircleBullet());
     series.tooltipText = "{categoryX}: [bold]{valueY}[/]";
     series.fill = am4core.color("#1E90FF");
+    series.sequencedInterpolation = true;
 
     // Add scrollbar
     visitChart.scrollbarX = new am4core.Scrollbar();
@@ -58,8 +59,6 @@ export default {
     visitChart.cursor = new am4charts.XYCursor();
     visitChart.cursor.lineX.strokeWidth = 0;
     visitChart.cursor.lineY.strokeWidth = 0;
-
-    series.sequencedInterpolation = true;
 
     // Save chart in data
     this.visitChart = visitChart;
