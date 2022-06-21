@@ -34,14 +34,18 @@ export default {
     async enter(siteId) {
       siteId = "5f8475902b0be670555f1bb3";
 
-      const authSiteId = await authFetchClient.auth(siteId);
+      try {
+        const authSiteId = await authFetchClient.auth(siteId);
 
-      if (authSiteId) {
-        SiteLocalStorageRepository.saveSiteId(authSiteId);
+        if (authSiteId) {
+          SiteLocalStorageRepository.saveSiteId(authSiteId);
 
-        this.$store.commit("site/setSiteId", authSiteId);
+          this.$store.commit("site/setSiteId", authSiteId);
 
-        this.$router.push("/analytics");
+          this.$router.push("/analytics");
+        }
+      } catch (e) {
+        console.log(e);
       }
     },
   },
