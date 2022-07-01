@@ -32,7 +32,7 @@ export default {
 
   methods: {
     async enter(siteId) {
-      siteId = "5f8475902b0be670555f1bb3";
+      // id сайта которое нужно ввести в input 5f8475902b0be670555f1bb3
 
       try {
         const authSiteId = await authFetchClient.auth(siteId);
