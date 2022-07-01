@@ -16,7 +16,6 @@
       <button
         @click="enter"
         class="p-4 pt-2 pb-2 shadow-lg shadow-gray-500/10 outline-offset-2 outline-2 active:outline"
-        :disabled="buttonDisabled"
       >
         Войти
       </button>
@@ -29,7 +28,6 @@ export default {
   data: () => ({
     siteId: "",
     siteIdValid: true,
-    buttonDisabled: false,
 
     SITE_ID_LENGTH: 24,
   }),
@@ -43,8 +41,6 @@ export default {
 
         return;
       }
-
-      this.buttonDisabled = true;
 
       this.$emit("enter", this.siteId);
     },
